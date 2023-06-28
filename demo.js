@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", getLocalTodos);
 todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteCheck);
 filterOption.addEventListener("change", filterTodo);
-
+////////////////////////////////////////////////////
 function addTodo(event) {
     event.preventDefault();
     const todoDiv = document.createElement("div");
@@ -32,7 +32,7 @@ function addTodo(event) {
     todoList.appendChild(todoDiv);
     todoInput.value = "";
 }
-
+////////////////////////////
 function deleteCheck(e) {
     const item = e.target;
 
@@ -76,7 +76,7 @@ function filterTodo(e) {
         }
     });
 }
-
+/////////////
 function saveLocalTodos(todo) {
     let todos;
     if(localStorage.getItem("todos") === null) {
@@ -116,7 +116,7 @@ function getLocalTodos() {
         todoList.appendChild(todoDiv);
     });
 }
-
+/////////////
 function removeLocalTodos(todo) {
     let todos;
     if(localStorage.getItem("todos") === null) {
